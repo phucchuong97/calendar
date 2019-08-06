@@ -1,0 +1,30 @@
+.week-component {
+  width: 100%;
+}
+
+.week-title {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.month-title {
+  height: 40px;
+  width: 100%;
+  background-color: #f15a27;
+  font-family: Pacifico;
+  top: 25%;
+  font-size: 22px;
+  color: white;
+}
+
+.month-component {
+  border: 2px #f15a27 solid;
+  background-color: white;
+  margin: 2px;
+  padding-bottom: 6px;
+}
+
+.month-component:hover {
+  background-color: #b6ecf0e8;
+  transition: 0.25s all;
+}

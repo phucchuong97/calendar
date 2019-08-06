@@ -1,0 +1,91 @@
+.ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.ul li{
+  list-style: none;
+  width: 30px;
+  height: 30px;
+  background-color: #f15a27;
+  margin: 0 10px;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.ul li:hover{
+  background-color: #2044a2;
+}
+
+.ul li span{
+  margin-top : 15px;
+  margin-left: -5px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.ul li.next span{
+  transform: translate(-25%,-50%) rotate(-45deg);
+  border-left: none;
+  border-top: none;
+}
+
+.ul li.next:hover span{
+  margin-left: 1px;
+}
+
+.ul li.next span:before{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background: #fff;
+  transform-origin: right;
+  transform: rotate(45deg) translate(-2px,12.75px) scale(0);
+  transition: .5s;
+}
+
+.ul li.next:hover span:before{
+  transform: rotate(45deg) translate(-2px,12.75px) scale(1);
+}
+
+.ul li.prev span{
+  transform: translate(25%,-50%) rotate(-45deg);
+  border-right: none;
+  border-bottom: none;
+}
+
+.ul li.prev:hover span{
+  margin-left: -10px;
+}
+
+.ul li.prev span:before{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background: #fff;
+  transform-origin: left;
+  transform: rotate(45deg) translate(-4px,2px) scale(0);
+  transition: .5s;
+}
+
+.ul li.prev:hover span:before{
+  transform: rotate(45deg) translate(-4px,2px) scale(1);
+}
+
+.year{
+  margin-top: -35px;
+  margin-bottom: 0px;
+  font-family: Pacifico;
+  font-size : 55px;
+}
+
+.year-btn-background{
+  margin-left: 35%;
+  margin-top: 20px;
+}

@@ -1,0 +1,106 @@
+.year-title {
+  font-size: 30px;
+  font-weight: bolder;
+  display: inline;
+  user-select: none;
+  margin: 10px;
+  color: brown;
+}
+
+.year-container {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.year-wrap {
+  position: relative;
+  min-width: 320px;
+  min-height: 100%;
+  margin-top: -10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.year-changing {
+  display: block;
+  font-family: Pacifico;
+  padding: 0px 0px 3px 0px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.year-button {
+  opacity: 0.8;
+  margin: 0px 6px 0px 6px;
+}
+
+.year-button:hover {
+  color: lightskyblue;
+  border-radius: 25px;
+}
+
+.year-container-filter div {
+  margin-left: 0px;
+}
+
+.filter-control {
+  justify-content: center;
+  display: block;
+}
+
+.control-container {
+  width: 100%;
+}
+
+.filtering {
+  margin-top: 15px;
+}
+
+.search-bar {
+  z-index: 2;
+  display: inline-block;
+  margin: -5px auto;
+  position: sticky;
+  height: 40px;
+  top: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .search-bar {
+    width: 300px;
+  }
+}
+@media only screen and (max-width:910px){
+  .search-bar{
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width:800px){
+  .search-bar{
+    display: none;
+  }
+  .year-container-filter {
+    margin-top: 50px;
+  }
+}
+
+.filtering-spiner{
+  z-index: 2;
+  min-width: 40px;
+  min-height: 33px;
+  display: inline-block;
+  margin: -5px auto;
+  position: sticky;
+  top: 10px;
+}
