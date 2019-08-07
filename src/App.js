@@ -4,7 +4,7 @@ import "./App.css";
 import "antd/dist/antd.css";
 import "./css/date.css";
 import YearView from "./pages/YearView";
-import Test from "./pages/TestView";
+import MonthView from "./pages/MonthView";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/" exact component={YearView} />
-          <Route path="/test" exact component={Test}></Route>
+          <Route path="/month/:year/:month" component={MonthView}></Route>
         </Switch>
       </div>
     </Router>

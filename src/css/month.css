@@ -10,7 +10,7 @@
 .month-title {
   height: 40px;
   width: 100%;
-  background-color: #f15a27;
+  background-color: green;
   font-family: Pacifico;
   top: 25%;
   font-size: 22px;
@@ -21,14 +21,14 @@
 }
 
 .month-component {
-  border: 2px #f15a27 solid;
+  border: 2px green solid;
   background-color: beige;
-  margin: 2px;
+  margin: 3px;
   padding-bottom: 6px;
   width: 360px;
 }
 
 .month-component:hover {
-  background-color: lightgrey;
-  transition: 0.25s all;
+  box-shadow: 2px 2px 20px green;
+  transform: scale(1.01)
 }

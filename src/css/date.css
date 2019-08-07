@@ -20,8 +20,9 @@
 
 .date-button { 
   font-weight: bold;
-  padding: 0px  8px !important;
+  padding: 0px  8px 4px 8px !important;
   border-top: 4px solid white;
+  box-shadow: 2px 2px 5px rgba(114, 113, 113, 0.4); 
 }
 
 .inactive {
@@ -32,6 +33,7 @@
   margin: 0px -3px;
   padding: 4px 8px 10px 8px !important;
   border: 2px solid red !important;
+  box-shadow: 2px 2px 5px red;
 }
 .bound-today{
   border: none;

@@ -7,14 +7,16 @@
   list-style: none;
   width: 30px;
   height: 30px;
-  background-color: #f15a27;
+  background-color: green;
+  box-shadow: 2px 2px 10px lightgreen;
   margin: 0 10px;
   border-radius: 50%;
   transition: .5s;
 }
 
 .ul li:hover{
-  background-color: #2044a2;
+  background-color: red;
+  box-shadow: 2px 2px 10px red;
 }
 
 .ul li span{
