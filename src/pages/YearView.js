@@ -1,7 +1,7 @@
 import React from "react";
 import Month from "../components/Month";
 import "../css/year.css";
-import { Row, Spinner } from "reactstrap";
+import { Row ,Spin} from "antd";
 import * as DateHelper from "../utils/DateHelper";
 import YearButton from "../components/YearButton";
 
@@ -44,7 +44,7 @@ export default class Year extends React.Component {
   }
 
   render() {
-    if (!this.state.yearData) return <Spinner size="large" />;
+    if (!this.state.yearData) return <Spin/>;
     const year = this.state.yearData.map((month, index) => {
       return (
         <Month
@@ -65,8 +65,8 @@ export default class Year extends React.Component {
               changeYear={param => this.updateYear(param)}
             />
           </div>
-          <div className="year-wrap">
-            <Row className="justify-content-center">{year}</Row>
+          <div>
+            <Row gutter={8} type="flex" justify="center">{year}</Row>
           </div>
         </div>
       </>

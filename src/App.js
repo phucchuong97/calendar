@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "antd/dist/antd.css";
+import "./css/date.css";
 import YearView from "./pages/YearView";
+import Test from "./pages/TestView";
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/" exact component={YearView} />
-          <Route ></Route>
+          <Route path="/test" exact component={Test}></Route>
         </Switch>
       </div>
     </Router>

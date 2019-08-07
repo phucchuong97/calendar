@@ -1,7 +1,6 @@
 import React from "react";
-import "../css/date.css";
 import * as DateHelper from "../utils/DateHelper";
-import { Button } from "reactstrap";
+import { Button } from "antd";
 
 export default class Date extends React.Component {
   constructor(props) {
@@ -45,10 +44,10 @@ export default class Date extends React.Component {
         </span>
       );
     }
+    const css = this.getClassCSS();
     const date = DateHelper.getDateFromShortDateStringFormat(
       this.props.dateObject.date
     );
-    const css = this.getClassCSS();
     const id = this.generateID(
       this.props.monthIndex,
       this.props.dateObject.date
@@ -57,8 +56,7 @@ export default class Date extends React.Component {
     return (
       <span className="date-component">
         <Button
-          type="button"
-          className={"btn-light date-button " + css}
+          className={"date-button "+css}
           id={id}
         >
           {date}
