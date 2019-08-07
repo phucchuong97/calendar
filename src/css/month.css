@@ -29,6 +29,6 @@
 }
 
 .month-component:hover {
-  background-color: #b6ecf0e8;
+  background-color: lightgrey;
   transition: 0.25s all;
 }

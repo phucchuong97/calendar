@@ -16,13 +16,12 @@
 
 .date-component:hover {
   transform: scale(1.2);
- 
 }
 
 .date-button { 
   font-weight: bold;
   padding: 0px  8px !important;
-  border-bottom: 4px solid white;
+  border-top: 4px solid white;
 }
 
 .inactive {
@@ -30,8 +29,12 @@
 }
 
 .today {
-  margin: 0px -4px;
-  border: 4px solid red;
+  margin: 0px -3px;
+  padding: 4px 8px 10px 8px !important;
+  border: 2px solid red !important;
+}
+.bound-today{
+  border: none;
 }
 
 .satuday {
