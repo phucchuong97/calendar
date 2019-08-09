@@ -63,43 +63,27 @@
 
 @media only screen and (max-width:600px){
   .month-card-unpicked {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    box-shadow: 4px 4px 10px #449fbb;
-    cursor: pointer;
+    width: 25px;
+    height: 25px;
     border-radius: 20px;
   }
 
   
   .month-card-unpicked .front-facing .month-name {
-    width: 100%;
-    font-family: Pacifico;
-    padding: 10%;
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
     color: white;
   }
   
   .month-card-picked {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    box-shadow: 4px 4px 10px#2044a2;
+    width: 35px;
+    height: 35px;
     margin: 2px;
-    cursor: pointer;
     border-radius: 25px;
   }
   
   .month-card-picked .front-facing .month-name {
-    width: 100%;
-    font-family: Pacifico;
-    padding: 10%;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     color: white;
   }
