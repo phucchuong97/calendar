@@ -74,21 +74,23 @@ class MonthView extends Component {
           </Row>
         );
     });
-    const listDays = this.state.days.length ? (
-      this.state.days.map((weeks, weekIndex) => (
-        <Row justify="start" type="flex" key={weekIndex}>
-          {weeks.map((day, dayIndex) => (
-            <DailyCard
-              date={day.date}
-              key={day.date}
-              lunarDate={this.state.lunarDays[weekIndex][dayIndex]}
-            />
-          ))}
-        </Row>
-      ))
-    ) : (
-      <Spin />
-    );
+    const listDays =
+      this.state.days.length && this.state.lunarDays.length ? (
+        this.state.days.map((weeks, weekIndex) => (
+          <Row justify="start" type="flex" key={weekIndex}>
+            {weeks.map((day, dayIndex) => (
+              <DailyCard
+                month = {this.state.monthPicked}
+                date={day.date}
+                key={day.date}
+                lunarDate={this.state.lunarDays[weekIndex][dayIndex]}
+              />
+            ))}
+          </Row>
+        ))
+      ) : (
+        <Spin />
+      );
 
     const listWeekDay = weekDays.map((item, index) => {
       const value = item === "Saturday" || item === "Sunday";

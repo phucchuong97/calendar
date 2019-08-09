@@ -82,7 +82,7 @@ export function getLunarDaysOfMonth(daysOfMonth) {
   const LunarDays = daysOfMonth.map(week =>
     week.map(day => {
       const lunarDate = getLunarDateObjet(day.date);
-      if(lunarDate.day===1){
+      if(lunarDate.day===1 ||parseInt(getDateFromShortDateStringFormat(day.date))===1){
         return lunarDate.day+"/"+lunarDate.month;
       }
       return lunarDate.day+"";
