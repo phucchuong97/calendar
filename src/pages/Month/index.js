@@ -3,8 +3,11 @@ import WeekDayCard from "../../components/WeekDayCard";
 import DailyCard from "../../components/DailyCard";
 import MonthButton from "../../components/MonthButton";
 import YearButton from "../../components/YearButton";
-import { Row, Col, Button, Icon, Spin } from "antd";
-import { getArrayDayOfMonth, getLunarDaysOfMonth } from "../../utils/DateHelper";
+import { Row, Col, Spin } from "antd";
+import {
+  getArrayDayOfMonth,
+  getLunarDaysOfMonth
+} from "../../utils/DateHelper";
 
 const weekDays = [
   "Monday",
@@ -64,22 +67,20 @@ class MonthView extends Component {
         return <MonthButton isPicked="picked" num={item} key={index} />;
       else
         return (
-          <Row type="flex" justify="center" key={index}>
-            <MonthButton
-              isPicked="unpicked"
-              pickMonth={data => this.pickMonth(item)}
-              num={item}
-            />
-          </Row>
+          <MonthButton
+            isPicked="unpicked"
+            pickMonth={data => this.pickMonth(item)}
+            num={item}
+          />
         );
     });
     const listDays =
       this.state.days.length && this.state.lunarDays.length ? (
         this.state.days.map((weeks, weekIndex) => (
-          <Row justify="start" type="flex" key={weekIndex}>
+          <Row justify="center" type="flex" key={weekIndex}>
             {weeks.map((day, dayIndex) => (
               <DailyCard
-                month = {this.state.monthPicked}
+                month={this.state.monthPicked}
                 date={day.date}
                 key={day.date}
                 lunarDate={this.state.lunarDays[weekIndex][dayIndex]}
@@ -107,25 +108,15 @@ class MonthView extends Component {
               />
             </Row>
             <Row justify="center" type="flex">
-              <Col md={{ span: 1, offset: 1 }}>
-                <Row justify="center" align="middle" type="flex">
-                  <Button>
-                    <Icon type="menu" />
-                  </Button>
-                </Row>
-              </Col>
-              <Col md={{ span: 11, offset: 1 }}>
-                <Row justify="start" type="flex">
+              {listMonths}
+            </Row>
+            <Row justify="center" type="flex">
+              <Col lg={{ span: 14}}>
+                <Row justify="center" type="flex">
                   {listWeekDay}
                 </Row>
+                <Row>{listDays}</Row>
               </Col>
-            </Row>
-
-            <Row justify="center" type="flex">
-              <Col md={{ span: 1, offset: 1 }} lg={{ span: 1 }}>
-                {listMonths}
-              </Col>
-              <Col md={{ span: 11, offset: 1 }}>{listDays}</Col>
             </Row>
           </Row>
         </>

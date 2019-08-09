@@ -110,3 +110,24 @@
 .title{
   font-weight: bold;
 }
+
+@media only screen and (max-width:600px){ 
+  .element-card {
+    width: 46px;
+    height: 55px;
+    margin: 4px;
+    border-radius: 3px;
+  }
+  
+  .element-card .front-facing .abr {
+    font-size: 25px;
+    margin: -28px 0 0 0;
+  }
+  
+  .element-card .front-facing .title {
+    font-size: 12px;
+    margin: 6px 0 0 0;
+  }
+   
+  
+}

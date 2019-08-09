@@ -4,7 +4,7 @@
   height: 40px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px #449fbb;
   cursor: pointer;
   border-radius: 20px;
 }
@@ -35,7 +35,7 @@
   height: 50px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px#2044a2;
   margin: 5px;
   cursor: pointer;
   border-radius: 25px;
@@ -59,4 +59,49 @@
   font-size: 25px;
   text-align: center;
   color: white;
+}
+
+@media only screen and (max-width:600px){
+  .month-card-unpicked {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    box-shadow: 4px 4px 10px #449fbb;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  
+  .month-card-unpicked .front-facing .month-name {
+    width: 100%;
+    font-family: Pacifico;
+    padding: 10%;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
+  
+  .month-card-picked {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    box-shadow: 4px 4px 10px#2044a2;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+  
+  .month-card-picked .front-facing .month-name {
+    width: 100%;
+    font-family: Pacifico;
+    padding: 10%;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+  
 }
