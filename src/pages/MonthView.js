@@ -5,7 +5,7 @@ import DailyCard from "../components/DailyCard";
 import MonthButton from "../components/MonthButton";
 import YearButton from "../components/YearButton";
 import { Row, Col, Button, Icon, Spin } from "antd";
-import { getArrayDayOfMonth } from "../utils/DateHelper";
+import { getArrayDayOfMonth, getLunarDaysOfMonth } from "../utils/DateHelper";
 
 const weekDays = [
   "Monday",
@@ -23,6 +23,7 @@ class MonthView extends Component {
     super(props);
     this.state = {
       days: [],
+      lunarDays: [],
       visible: false,
       monthPicked: parseInt(this.props.match.params.month),
       yearPicked: parseInt(this.props.match.params.year)
@@ -35,10 +36,13 @@ class MonthView extends Component {
 
   pickMonth = async month => {
     this.state.monthPicked = month;
+    const days = getArrayDayOfMonth(
+      `${this.state.yearPicked}-${this.state.monthPicked}-1`
+    );
+    const lunarDays = getLunarDaysOfMonth(days);
     this.setState({
-      days: getArrayDayOfMonth(
-        `${this.state.yearPicked}-${this.state.monthPicked}-1`
-      )
+      days: days,
+      lunarDays: lunarDays
     });
   };
 
@@ -65,16 +69,20 @@ class MonthView extends Component {
             <MonthButton
               isPicked="unpicked"
               pickMonth={data => this.pickMonth(item)}
-              num={item}    
+              num={item}
             />
           </Row>
         );
     });
     const listDays = this.state.days.length ? (
-      this.state.days.map((weeks,index) => (
-        <Row justify="start" type="flex" key={index}>
-          {weeks.map(day => (
-            <DailyCard date={day.date} key={day.date}/>
+      this.state.days.map((weeks, weekIndex) => (
+        <Row justify="start" type="flex" key={weekIndex}>
+          {weeks.map((day, dayIndex) => (
+            <DailyCard
+              date={day.date}
+              key={day.date}
+              lunarDate={this.state.lunarDays[weekIndex][dayIndex]}
+            />
           ))}
         </Row>
       ))

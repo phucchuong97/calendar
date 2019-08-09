@@ -15,7 +15,7 @@ export default class Daily extends Component {
           {this.props.isTracked && (
             <div className="isTracked" style={{ backgroundColor: "#f15a27" }} />
           )}
-          <p className={`title`}>am lich</p>
+          <p className={`title`}>{this.props.lunarDate}</p>
         </div>
       </div>
     );

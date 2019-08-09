@@ -1,4 +1,5 @@
 import date_fns from "date-fns";
+import lunar from "./SolarLunarCalendarHelper";
 
 export function getArrayDayOfMonth(dateString) {
   const beginMonth = date_fns.startOfMonth(dateString);
@@ -6,7 +7,7 @@ export function getArrayDayOfMonth(dateString) {
   let dayOfMonth = [[], [], [], [], [], []];
   for (let week = 0; week < 6; week++) {
     for (let dateOfWeek = 0; dateOfWeek < 7; dateOfWeek++) {
-      dayOfMonth[week].push({date:getShortDateString(beginDate)});
+      dayOfMonth[week].push({ date: getShortDateString(beginDate) });
       beginDate = date_fns.addDays(beginDate, 1);
     }
   }
@@ -68,4 +69,24 @@ export function getMonthFromShortDateStringFormat(dateString) {
 
 export function getYearFromShortDateStringFormat(dateString) {
   return dateString.split("-")[0];
+}
+
+export function getLunarDateObjet(dateString) {
+  const day = getDateFromShortDateStringFormat(dateString);
+  const month = parseInt(getMonthFromShortDateStringFormat(dateString)) -1;
+  const year = getYearFromShortDateStringFormat(dateString);
+  return lunar.solarToLunar(new Date(year, month, day));
+}
+
+export function getLunarDaysOfMonth(daysOfMonth) {
+  const LunarDays = daysOfMonth.map(week =>
+    week.map(day => {
+      const lunarDate = getLunarDateObjet(day.date);
+      if(lunarDate.day===1){
+        return lunarDate.day+"/"+lunarDate.month;
+      }
+      return lunarDate.day+"";
+    })
+  );
+  return LunarDays;
 }
