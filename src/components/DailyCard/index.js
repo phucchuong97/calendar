@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { getDateFromShortDateStringFormat ,getMonthFromShortDateStringFormat} from "../utils/DateHelper";
+import { getDateFromShortDateStringFormat ,getMonthFromShortDateStringFormat} from "../../utils/DateHelper";
 
-import "../css/card.css";
+import "./card.css";
 
 export default class Daily extends Component {
   render() {

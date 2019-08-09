@@ -1,6 +1,6 @@
 import React from "react";
-import "../css/month.css";
-import Date from "./Date";
+import "./month.css";
+import Date from "../Date";
 import { Link } from "react-router-dom";
 
 const monthTitle = [

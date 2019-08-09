@@ -1,9 +1,9 @@
 import React from "react";
-import Month from "../components/Month";
-import "../css/year.css";
+import Month from "../../components/Month";
+import "./style.css";
 import { Row ,Spin} from "antd";
-import * as DateHelper from "../utils/DateHelper";
-import YearButton from "../components/YearButton";
+import * as DateHelper from "../../utils/DateHelper";
+import YearButton from "../../components/YearButton";
 
 export default class Year extends React.Component {
   constructor(props) {

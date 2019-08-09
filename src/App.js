@@ -2,10 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import "antd/dist/antd.css";
-import "./css/date.css";
-import YearView from "./pages/YearView";
-import MonthView from "./pages/MonthView";
-
+import YearView from "./pages/Year";
+import MonthView from "./pages/Month";
 function App() {
   return (
     <Router>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import '../css/YearButton.css'
+import './YearButton.css'
 
 export default class YearButton extends Component {
   render(){

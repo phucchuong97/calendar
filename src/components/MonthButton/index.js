@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "../css/MonthButton.css";
+import "./MonthButton.css";
 
 export default class MonthButton extends Component {
   render() {

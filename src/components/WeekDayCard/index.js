@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "../css/WeekDay.css";
+import "./WeekDay.css";
 
 export default class DailyCard extends Component {
   render() {
