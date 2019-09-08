@@ -6,7 +6,8 @@ import YearButton from "../../components/YearButton";
 import { Row, Col, Spin } from "antd";
 import {
   getArrayDayOfMonth,
-  getLunarDaysOfMonth
+  getLunarDaysOfMonth,
+  getShortDateString
 } from "../../utils/DateHelper";
 
 const weekDays = [
@@ -18,11 +19,13 @@ const weekDays = [
   "Saturday",
   "Sunday"
 ];
+const today = getShortDateString(new Date());
 const months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 class MonthView extends Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       days: [],
       lunarDays: [],
@@ -67,7 +70,7 @@ class MonthView extends Component {
         return <MonthButton isPicked="picked" num={item} key={index} />;
       else
         return (
-          <MonthButton
+          <MonthButton         
             isPicked="unpicked"
             pickMonth={data => this.pickMonth(item)}
             num={item}
@@ -80,6 +83,7 @@ class MonthView extends Component {
           <Row justify="center" type="flex" key={weekIndex}>
             {weeks.map((day, dayIndex) => (
               <DailyCard
+                isToday= {today === day.date}
                 month={this.state.monthPicked}
                 date={day.date}
                 key={day.date}
