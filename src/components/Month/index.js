@@ -57,7 +57,7 @@ export default function Month(props) {
   });
   return (
     <div className="month-component">
-      <Link to={"/month/" + props.year + "/" + month} style={{ textDecoration: 'none' }}>
+      <Link to={"/" + props.year + "/" + month} style={{ textDecoration: 'none' }}>
         <div className="month-title">{monthTitle[props.monthIndex]}</div>
       </Link>
       <Week week={dateName} class="week-title" />

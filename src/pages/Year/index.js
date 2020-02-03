@@ -12,8 +12,9 @@ export default class Year extends React.Component {
     this.today = new Date();
     this.initOptions();
     this.todayShortString = DateHelper.getShortDateString(this.today);
+    this.year = parseInt(this.props.match.params.year) || this.today.getFullYear();
     this.state = {
-      yearPicked: this.today.getFullYear(),
+      yearPicked: this.year,
       yearData: null,
       value: null,
       isFiltering: false

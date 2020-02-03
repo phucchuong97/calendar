@@ -9,8 +9,8 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/" exact component={YearView} />
-          <Route path="/month/:year/:month" component={MonthView}></Route>
+          <Route path="/year/:year?" exact component={YearView} />
+          <Route path="/:year?/:month?" component={MonthView}></Route>
         </Switch>
       </div>
     </Router>

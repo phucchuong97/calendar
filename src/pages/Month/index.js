@@ -27,6 +27,11 @@ class MonthView extends Component {
     super(props);
     this.month = parseInt(this.props.match.params.month);
     this.year= parseInt(this.props.match.params.year);
+    if(!this.month || !this.year){
+      const date = new Date();
+      this.year = date.getFullYear();
+      this.month = date.getMonth() + 1;
+    }
     this.state = {
       days: [],
       lunarDays: [],
