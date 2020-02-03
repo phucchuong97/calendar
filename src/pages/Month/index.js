@@ -9,6 +9,7 @@ import {
   getLunarDaysOfMonth,
   getShortDateString
 } from "../../utils/DateHelper";
+import "./style.css";
 
 const weekDays = [
   "Monday",
