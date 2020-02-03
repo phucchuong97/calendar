@@ -25,13 +25,14 @@ const months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 class MonthView extends Component {
   constructor(props) {
     super(props);
-    
+    this.month = parseInt(this.props.match.params.month);
+    this.year= parseInt(this.props.match.params.year);
     this.state = {
       days: [],
       lunarDays: [],
       visible: false,
-      monthPicked: parseInt(this.props.match.params.month),
-      yearPicked: parseInt(this.props.match.params.year)
+      monthPicked: this.month,
+      yearPicked: this.year
     };
   }
 

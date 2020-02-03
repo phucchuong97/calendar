@@ -121,12 +121,25 @@
   
   .element-card .front-facing .abr {
     font-size: 20px;
-    margin: -25px 0 0 0;
+    margin: -22px 0 0 0;
   }
   
   .element-card .front-facing .title {
     font-size: 10px;
     margin: 5px 0 0 0;
+  }
+
+  .element-card .front-facing .istoday {
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 10px;
+    background-color: #f15a27;
+    position: absolute;
+    top: -12%;
+    font-size: 8px;
+    text-align: center;
+    color: white;
+    font-weight: 300;
   }
    
 }
